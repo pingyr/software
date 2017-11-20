@@ -1,10 +1,8 @@
 package com.pingyrsoft.entity;
 
-import org.springframework.stereotype.Repository;
 
 import java.util.Date;
 
-@Repository
 public class UserInfo {
 
     private long id;

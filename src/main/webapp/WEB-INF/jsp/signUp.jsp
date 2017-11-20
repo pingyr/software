@@ -33,7 +33,7 @@
                 <p>仅接受邀请码方式注册</p>
             </header>
             <div class="box">
-                <form method="post" action="${pageContext.request.contextPath}/account/create">
+                <form method="post" action="#">
                     <div class="row uniform 50%">
                         <div class="12u">
                             <input type="text" name="username" id="username" class="" value="" placeholder="用户名"/>

@@ -24,7 +24,7 @@
                 <p>如果你对我的网站有新的建议与想法，请与我联系.</p>
             </header>
             <div class="box">
-                <form method="post" action="${pageContext.request.contextPath}/send-message" >
+                <form method="post" action="#" >
                     <div class="row uniform 50%">
                         <div class="6u 12u(mobilep)">
                             <input type="text" name="name" id="name" value="" placeholder="姓名" />

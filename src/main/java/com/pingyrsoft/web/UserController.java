@@ -22,13 +22,13 @@ public class UserController {
     }
 
     @ResponseBody
-    @RequestMapping(value = "/create",method = RequestMethod.POST)
+    @RequestMapping(value = "/update",method = RequestMethod.POST)
     public void update(Long id){
         userDao.updateUser(id);
     }
 
     @ResponseBody
-    @RequestMapping(value = "/create",method = RequestMethod.POST)
+    @RequestMapping(value = "/delete",method = RequestMethod.POST)
     public void delete(Long id){
         userDao.deleteUser(id);
     }
