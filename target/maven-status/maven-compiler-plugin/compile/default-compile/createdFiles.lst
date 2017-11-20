@@ -1,0 +1,8 @@
+com\pingyrsoft\dao\SuggestMessageDao.class
+com\pingyrsoft\entity\SuggestMessage.class
+com\pingyrsoft\web\SuggestMessageController.class
+com\pingyrsoft\dao\UserinfoDao.class
+com\pingyrsoft\service\impl\SuggestMessageServiceImpl.class
+com\pingyrsoft\entity\Userinfo.class
+com\pingyrsoft\web\DispatchController.class
+com\pingyrsoft\service\SuggestMessageService.class

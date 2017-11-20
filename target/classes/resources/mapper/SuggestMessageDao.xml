@@ -1,0 +1,9 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pingyrsoft.dao.SuggestMessageDao">
+    <insert id="newSuggestMessage" parameterType="SuggestMessage">
+        INSERT INTO suggest_message (`name`,`email`,`subject`,`content`,`create_time`)
+                VALUES (#{suggestMessage.name},#{suggestMessage.email},#{suggestMessage.subject},#{suggestMessage.content},#{suggestMessage.createTime})
+    </insert>
+</mapper>

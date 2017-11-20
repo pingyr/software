@@ -1,0 +1,10 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pingyrsoft.dao.UserInfoDao">
+    <insert id="createAccount" parameterType="UserInfo">
+        INSERT INTO user_info (`u_id`,`name`,`password`,`email`,`invite_code`,`create_time`)
+        VALUES (#{userInfo.uId},#{userInfo.name},#{userInfo.password},#{userInfo.email},#{userInfo.inviteCode},#{userInfo.createTime})
+    </insert>
+
+</mapper>
