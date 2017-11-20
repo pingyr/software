@@ -1,0 +1,22 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pingyrsoft.dao.UserDao">
+
+    <insert id="addUser" parameterType="long">
+        INSERT INTO test_01 (`id`,`name`,`password`,`create_time`)
+        VALUES (#{userentity.id},#{userentity.name},#{userentity.password},#{userentity.create_time})
+    </insert>
+
+    <update id="updateUser" parameterType="long">
+        UPDATE test_01 SET`id`=#{userentity.id},`name`=#{userentity.name},`password`=#{userentity.password},`create_time`=#{userentity.create_time} WHERE
+    </update>
+
+    <select id="selectUser" parameterType="long" resultType="com.pingyrsoft.entity.UserEntity">
+        select * from test_01 where id=#{id}
+    </select>
+
+    <delete id="delectUser" parameterType="long" >
+        DELETE * from test_01 where id=#{id}
+    </delete>
+</mapper>
