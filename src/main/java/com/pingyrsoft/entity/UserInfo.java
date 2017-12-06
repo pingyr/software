@@ -1,20 +1,21 @@
 package com.pingyrsoft.entity;
 
+import org.springframework.stereotype.Repository;
 
 import java.util.Date;
 
+@Repository
 public class UserInfo {
 
     private long id;
-    private Integer uId;
     private String name;
     private String password;
-    private Integer gender;
-    private int age;
     private String email;
-    private Integer inviteCode;
     private String headImageUrl;
     private Date createTime;
+    private Date lastLoginTime;  //最近一次登录时间
+    private Date lastQuitTime;   //最近一次推出登录时间
+    private boolean isOnLine;    //账号是否在线
 
     public long getId() {
         return id;
@@ -22,14 +23,6 @@ public class UserInfo {
 
     public void setId(long id) {
         this.id = id;
-    }
-
-    public Integer getuId() {
-        return uId;
-    }
-
-    public void setuId(Integer uId) {
-        this.uId = uId;
     }
 
     public String getName() {
@@ -48,36 +41,12 @@ public class UserInfo {
         this.password = password;
     }
 
-    public Integer getGender() {
-        return gender;
-    }
-
-    public void setGender(Integer gender) {
-        this.gender = gender;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
     public String getEmail() {
         return email;
     }
 
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    public Integer getInviteCode() {
-        return inviteCode;
-    }
-
-    public void setInviteCode(Integer inviteCode) {
-        this.inviteCode = inviteCode;
     }
 
     public String getHeadImageUrl() {
@@ -96,37 +65,68 @@ public class UserInfo {
         this.createTime = createTime;
     }
 
+    public Date getLastLoginTime() {
+        return lastLoginTime;
+    }
+
+    public void setLastLoginTime(Date lastLoginTime) {
+        this.lastLoginTime = lastLoginTime;
+    }
+
+    public Date getLastQuitTime() {
+        return lastQuitTime;
+    }
+
+    public void setLastQuitTime(Date lastQuitTime) {
+        this.lastQuitTime = lastQuitTime;
+    }
+
+    public boolean isOnLine() {
+        return isOnLine;
+    }
+
+    public void setOnLine(boolean onLine) {
+        isOnLine = onLine;
+    }
+
     public UserInfo() {
     }
 
-    public UserInfo(String name, String password, String email, Integer inviteCode, Date createTime) {
-        this.name = name;
-        this.password = password;
-        this.email = email;
-        this.inviteCode = inviteCode;
-        this.createTime = createTime;
-    }
-
-    public UserInfo(Integer uId, String name, String password, String email, Integer inviteCode, Date createTime) {
-        this.uId = uId;
-        this.name = name;
-        this.password = password;
-        this.email = email;
-        this.inviteCode = inviteCode;
-        this.createTime = createTime;
-    }
-
-    public UserInfo(long id, Integer uId, String name, String password, Integer gender, int age, String email,
-                    Integer inviteCode, String headImageUrl, Date createTime) {
+    public UserInfo(long id, String name, String password, String email, String headImageUrl,
+                    Date createTime, Date lastLoginTime, Date lastQuitTime, boolean isOnLine) {
         this.id = id;
-        this.uId = uId;
         this.name = name;
         this.password = password;
-        this.gender = gender;
-        this.age = age;
         this.email = email;
-        this.inviteCode = inviteCode;
         this.headImageUrl = headImageUrl;
         this.createTime = createTime;
+        this.lastLoginTime = lastLoginTime;
+        this.lastQuitTime = lastQuitTime;
+        this.isOnLine = isOnLine;
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
+
+    @Override
+    public String toString() {
+        return super.toString();
+    }
+
+    @Override
+    protected void finalize() throws Throwable {
+        super.finalize();
     }
 }
