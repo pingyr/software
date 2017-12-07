@@ -17,6 +17,6 @@
         <li><a href="https://weibo.com/u/3361085070" class="icon fa-weibo"><span class="label">weibo</span></a></li>
     </ul>
     <ul class="copyright">
-        <li><a href="#">&copy; Pingyr.</a> All rights reserved.</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+        <li><a href="#">&copy; Pingyr.</a> All rights reserved.</li><li></li>
     </ul>
 </footer>

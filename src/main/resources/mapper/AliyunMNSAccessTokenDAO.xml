@@ -1,0 +1,37 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pingyrsoft.dao.AliyunMNSAccessTokenDAO">
+    <insert id="add" parameterType="AliyunMNSAccessToken">
+        INSERT INTO AliyunMNSAccessToken(
+            endpoint,
+            accessKeyId,
+            accessKeySecret,
+            top_ref,
+            free_sign_name,
+            template_name,
+            create_time
+        ) VALUES
+            (#{aliyunMNSAccessToken.endipoint},
+             #{aliyunMNSAccessToken.accessKeyId},
+             #{aliyunMNSAccessToken.accessKeySecret},
+             #{aliyunMNSAccessToken.topRef},
+             #{aliyunMNSAccessToken.freeSignName},
+             #{aliyunMNSAccessToken.templateName},
+             #{aliyunMNSAccessToken.createTime})
+    </insert>
+
+    <select id="query" resultType="AliyunMNSAccessToken">
+        SELECT
+            id,
+            endpoint,
+            accessKeyId,
+            accessKeySecret,
+            top_ref,
+            free_sign_name,
+            template_name,
+            create_time
+        FROM AliyunMNSAccessToken ORDER BY create_time ASC
+
+    </select>
+</mapper>
